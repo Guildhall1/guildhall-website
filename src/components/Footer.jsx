@@ -48,8 +48,12 @@ export function Footer() {
 
       <div className="container site-footer__legal">
         <p>
-          © {new Date().getFullYear()} {legal.registeredName || site.name}.{' '}
-          {legal.registrationNumber ? `Company number ${legal.registrationNumber}.` : <Todo>company registration details</Todo>}
+          © {new Date().getFullYear()} {site.name}.{' '}
+          {legal.registrationNumber
+            ? (legal.registeredName && legal.registeredName !== site.name
+                ? `Registered as ${legal.registeredName}, ${legal.registrationNumber}.`
+                : `${legal.registrationNumber}.`)
+            : <Todo>company registration details</Todo>}
         </p>
         <Link to="/privacy">Privacy and cookies</Link>
       </div>
