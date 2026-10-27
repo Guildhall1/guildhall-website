@@ -1,0 +1,90 @@
+/* ─────────────────────────────────────────────────────────────
+   DESIGN TOKENS — change brand colours, fonts and spacing here.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  /* Brand palette (provisional) */
+  --brand-green: #033F28;       /* from the logo */
+  --brand-gold: #CBA249;        /* from the logo */
+  --brand-white: #FFFFFF;
+  --brand-ivory: #F7F5F0;
+  --brand-charcoal: #30343B;
+
+  /* Semantic colours used by components (light theme) */
+  --color-bg: var(--brand-ivory);
+  --color-surface: var(--brand-white);
+  --color-text: var(--brand-charcoal);
+  --color-heading: var(--brand-green);
+  --color-muted: #5A5F68;
+  --color-line: rgba(3, 63, 40, 0.16);
+  --color-accent: var(--brand-gold);
+  --color-accent-ink: #7D5F25;            /* gold darkened for readable text on light backgrounds */
+  --color-band: var(--brand-green);        /* dark sections: hero, call to action, footer */
+  --color-band-deep: #022A1B;
+  --color-band-text: #E9E6DF;
+  --color-band-heading: var(--brand-ivory);
+  --color-focus: #2F6FD6;
+  --color-todo-bg: #FFF4D6;
+  --color-todo-text: #5C4410;
+  --color-error: #A3271F;
+  --color-error-bg: #FBECEA;
+  --color-success: #1F6B3A;
+  --color-success-bg: #E8F4EC;
+  --color-warning-bg: #FDF6E6;
+
+  /* Typography */
+  --font-display: 'Libre Caslon Text', Georgia, 'Times New Roman', serif;
+  --font-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --text-sm: 0.9rem;
+  --text-base: 1.0625rem;
+  --text-md: 1.25rem;
+  --text-lg: clamp(1.45rem, 1.2rem + 0.9vw, 1.85rem);
+  --text-xl: clamp(1.9rem, 1.5rem + 1.6vw, 2.6rem);
+  --text-hero: clamp(2.4rem, 1.6rem + 3.6vw, 4.4rem);
+
+  /* Layout */
+  --container: 1180px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --section-y: clamp(3.5rem, 7vw, 6.5rem);
+  --radius: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #0B1C15;
+    --color-surface: #12291F;
+    --color-text: #DCD9D2;
+    --color-heading: #F7F5F0;
+    --color-muted: #A7ADB8;
+    --color-line: rgba(247, 245, 240, 0.16);
+    --color-accent-ink: var(--brand-gold);
+    --color-band: #06180F;
+    --color-band-deep: #03100A;
+    --color-focus: #8DB4FF;
+    --color-todo-bg: #3D3014;
+    --color-todo-text: #F6E3B5;
+    --color-error: #FFB4AB;
+    --color-error-bg: #3A1A18;
+    --color-success: #9BD8AE;
+    --color-success-bg: #14301F;
+    --color-warning-bg: #2E2614;
+  }
+}
+:root[data-theme="dark"] {
+  --color-bg: #0B1C15;
+  --color-surface: #12291F;
+  --color-text: #DCD9D2;
+  --color-heading: #F7F5F0;
+  --color-muted: #A7ADB8;
+  --color-line: rgba(247, 245, 240, 0.16);
+  --color-accent-ink: var(--brand-gold);
+  --color-band: #06180F;
+  --color-band-deep: #03100A;
+  --color-focus: #8DB4FF;
+  --color-todo-bg: #3D3014;
+  --color-todo-text: #F6E3B5;
+  --color-error: #FFB4AB;
+  --color-error-bg: #3A1A18;
+  --color-success: #9BD8AE;
+  --color-success-bg: #14301F;
+  --color-warning-bg: #2E2614;
+}
