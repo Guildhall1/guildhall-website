@@ -5,7 +5,6 @@ import { Todo } from '../components/Todo.jsx';
 
 export default function Privacy() {
   usePageMeta('privacy');
-  const name = site.legal.registeredName || site.name;
   return (
     <>
       <PageHeader title="Privacy and cookies" intro="How we handle personal information shared through this website." />
@@ -16,7 +15,7 @@ export default function Privacy() {
           </div>
 
           <h2>Who we are</h2>
-          <p>{name} is responsible for personal information collected through this website. <Todo>registered company name, number, address and data protection contact</Todo></p>
+          <p>{site.name}{site.legal.registeredName && site.legal.registeredName !== site.name ? ` (registered as ${site.legal.registeredName}${site.legal.registrationNumber ? `, ${site.legal.registrationNumber}` : ''})` : site.legal.registrationNumber ? ` (${site.legal.registrationNumber})` : ''}{site.contact.address ? `, ${site.contact.address},` : ''} is responsible for personal information collected through this website. For any privacy questions or requests, contact us at {site.contact.email ? <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a> : <Todo>contact email</Todo>}.</p>
 
           <h2>Information we collect</h2>
           <p>When you use our contact form, we collect the details you give us: your name, email address, and optionally your phone number and company, along with your enquiry type and message.</p>
@@ -31,7 +30,7 @@ export default function Privacy() {
           <p><Todo>how long you keep enquiry and candidate information</Todo></p>
 
           <h2>Your rights</h2>
-          <p>You may have rights to access, correct or delete your personal information, and to object to how it is used. To make a request, contact us. <Todo>contact email for privacy requests and the relevant supervisory authority</Todo></p>
+          <p>You may have rights to access, correct or delete your personal information, and to object to how it is used. To make a request, contact us using the email address above. <Todo>the data protection authority people can complain to</Todo></p>
 
           <h2>Cookies</h2>
           <p>This website does not set cookies of its own and does not use analytics or advertising trackers. Fonts are loaded from Google Fonts, which means your browser connects to Google’s servers when you visit. If you add analytics or other tools later, update this section and add a cookie consent banner if required.</p>
