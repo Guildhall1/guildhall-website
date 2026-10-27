@@ -24,8 +24,8 @@ export const site = {
   },
 
   legal: {
-    registeredName: null,      // full legal company name
-    registrationNumber: null,  // company registration number
+    registeredName: 'Guildhall Professional Services', // name on the CAC certificate
+    registrationNumber: 'BN 9955633', // CAC registration, shown in the footer
     registeredOffice: null,
   },
 
