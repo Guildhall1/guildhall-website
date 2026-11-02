@@ -36,7 +36,7 @@ export default function Contact() {
               <dd>{contact.hours || <Todo>opening hours</Todo>}</dd>
             </dl>
             <h2>What happens next</h2>
-            <p>We read every message and will reply to the email address you provide. <Todo>your usual response time</Todo></p>
+            <p>We read every message and aim to reply within three working days, to the email address you provide.</p>
           </aside>
         </div>
       </section>
